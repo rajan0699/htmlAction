@@ -1,5 +1,65 @@
-<center>
-  <h1>ilya thalapathi vijay</h1>
-</center>
-<p>Joseph Vijay Chandrasekhar (born 22 June 1974), known professionally as Vijay, is an Indian actor and playback singer who works in Tamil cinema. In a career spanning in just over 3 decades, Vijay has acted in over 69 films and is one of the most commercially successful actors in Tamil cinema with multiple films amongst the highest-grossing Tamil films of all time and is amongst the highest paid actors in India.</p>
-<hr>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /*  inkoop   */
+        body{
+            background: #333;
+            font-family: sans-serif;
+            margin: 0 auto;
+           
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            color: aliceblue;
+            border: 1px solid #ccc;
+        }
+        
+        input[type="number"]{
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            border-radius: 6px;
+        }
+        p{
+            font-size: 26px;
+            margin-top: 10px;
+            color: rgb(255,255,255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Number Validator</h2>
+
+        <input type="number" id="numberInput" placeholder="Enter a number" oninput="ValidateNumber()" />
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function ValidateNumber(){
+            const input = document.getElementById('numberInput').value;
+            const result = document.getElementById('result');
+            const num = parseInt(input, 10);
+
+            if(num < 0 ){
+                result.textContent = " Enter a positive value";
+            }else if (num%2 === 0){
+                result.textContent = `${num + 2}, ${num + 4}, ${num + 6}`;
+            }else{
+                result.textContent = `${num + 2}, ${num + 4}, ${num + 6}`;
+            }
+        }
+    </script>
+</body>
+</html>
